@@ -1,0 +1,4 @@
+ack_sagemaker_oidc_role: arn:aws:iam::980664324833:role/kf-ack-sm-controller-role-kf-test
+cluster:
+  name: kf-test
+  region: us-east-1
