@@ -5,7 +5,7 @@ aws configure --profile=kubeflow
 aws sts get-caller-identity
 
 export AWS_PROFILE=kubeflow
-export CLUSTER_NAME=kube-test
+export CLUSTER_NAME=kf-test
 export CLUSTER_REGION=us-east-1
 eksctl create cluster --name ${CLUSTER_NAME} --version 1.25 --region ${CLUSTER_REGION} --nodegroup-name linux-nodes --node-type t3.medium --nodes 5 --nodes-min 5 --nodes-max 3 --managed --with-oidc
 
@@ -19,7 +19,7 @@ export AWS_RELEASE_VERSION=v1.7.0-aws-b1.0.2
 #git clone https://github.com/awslabs/kubeflow-manifests.git && cd kubeflow-manifests
 #git checkout ${AWS_RELEASE_VERSION}
 #git clone --branch ${KUBEFLOW_RELEASE_VERSION} https://github.com/kubeflow/manifests.git upstream
-git clone https://github.com/paravatha/kubeflow-test-manifests
+git clone https://github.com/paravatha/kubeflow-aws-manifests
 cd kubeflow-test-manifests
 make install-tools
 make deploy-kubeflow INSTALLATION_OPTION=kustomize DEPLOYMENT_OPTION=vanilla
