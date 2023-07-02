@@ -29,6 +29,9 @@ python3.8 -m pip install -r requirements.txt
 # update tests/e2e/utils/load_balancer/config.yaml
 PYTHONPATH=.. python3.8 utils/load_balancer/setup_load_balancer.py
 
+# https://github.com/kubeflow/manifests/blob/master/README.md#port-forward
+# https://github.com/kubeflow/manifests/blob/master/README.md#change-default-user-password
+
 DELETE
 # Check if there any external IP svc
 kubectl get svc --all-namespaces
