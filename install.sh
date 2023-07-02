@@ -12,7 +12,7 @@ eksctl create cluster --name ${CLUSTER_NAME} --version 1.25 --region ${CLUSTER_R
 #eksctl get addon --name aws-ebs-csi-driver --cluster ${CLUSTER_NAME}
 #kubectl describe daemonset aws-node --namespace kube-system | grep amazon-k8s-cni: | cut -d : -f 3
 ## add EBS and VPC add-ons
-## grant EBS permissions to nodegroups
+## grant EBS permissions to nodegroups, EBSCSI and EBS create
 
 export KUBEFLOW_RELEASE_VERSION=v1.7.0
 export AWS_RELEASE_VERSION=v1.7.0-aws-b1.0.2
