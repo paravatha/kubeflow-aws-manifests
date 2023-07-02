@@ -1,12 +1,12 @@
 cluster:
-  name:
-  region:
+  name: kube-test
+  region: us-east-1
 kubeflow:
   alb:
     scheme: internet-facing
 route53:
   rootDomain:
-    hostedZoneId:
-    name:
+    hostedZoneId: Z09711282XSOE6J3BTA2D
+    name: cmcloudlab562.info
   subDomain:
-    name:
+    name: platform.cmcloudlab562.info
