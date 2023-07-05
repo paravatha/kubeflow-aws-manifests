@@ -23,7 +23,7 @@ git checkout ${AWS_RELEASE_VERSION}
 git clone --branch ${KUBEFLOW_RELEASE_VERSION} https://github.com/kubeflow/manifests.git upstream
 make install-tools
 
-AWS_PROFILE=kubeflow eksctl create cluster --name ${CLUSTER_NAME} --version 1.25 --region ${CLUSTER_REGION} --nodegroup-name linux-nodes --node-type t3.medium --nodes 5 --nodes-min 5 --nodes-max 3 --managed --with-oidc
+AWS_PROFILE=kubeflow eksctl create cluster --name ${CLUSTER_NAME} --version 1.25 --region ${CLUSTER_REGION} --nodegroup-name linux-nodes --node-type t3.medium --nodes 3 --nodes-min 3 --nodes-max 5 --managed --with-oidc
 
 #git clone https://github.com/paravatha/kubeflow-aws-manifests
 #eksctl get addon --name aws-ebs-csi-driver --cluster ${CLUSTER_NAME}
